@@ -7,8 +7,6 @@ class Solution:
             if val <= capacity:
                 steps += 1
                 capacity -= val
-                print()
-                
             else:
                 steps += index*2 +1
                 capacity = capacity_count - val
