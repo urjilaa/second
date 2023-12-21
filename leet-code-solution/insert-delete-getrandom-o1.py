@@ -17,11 +17,11 @@ class RandomizedSet:
         if not val in self.data_map:
             return False
 
-        last_elem_in_list = self.data[-1]
-        index_of_elem_to_remove = self.data_map[val]
+        last_elem = self.data[-1]
+        idx_remove = self.data_map[val]
 
-        self.data_map[last_elem_in_list] = index_of_elem_to_remove
-        self.data[index_of_elem_to_remove] = last_elem_in_list
+        self.data_map[last_elem] = idx_remove
+        self.data[idx_remove] = last_elem
 
         self.data[-1] = val
         self.data.pop()
