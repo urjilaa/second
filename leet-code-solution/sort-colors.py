@@ -3,7 +3,6 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        
         zero = nums.count(0)
         one = nums.count(1)
         two = nums.count(2)
