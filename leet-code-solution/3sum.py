@@ -2,12 +2,9 @@ class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         nums.sort()
         res = set()
-        #target = 0 ???
 
         for i in range(len(nums)):
-            #target = 0 - nums[i]
-            l = i + 1
-            r = len(nums)-1
+            l, r = i + 1, len(nums)-1
 
             while l < r:
                 if nums[l] + nums[r] > -nums[i]:
@@ -19,4 +16,4 @@ class Solution:
                     l += 1
                     r -= 1
 
-        return list(map(list, res))
+        return list(res)
