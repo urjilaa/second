@@ -10,6 +10,6 @@ class Solution:
                 self.store[n] = (self.countGoodNumbers(n-1) * 4)%(10**9 + 7)
             else:
                 self.store[n] = (self.countGoodNumbers(n//2) * self.countGoodNumbers((n//2)+1))%(10**9 + 7)
-            return (self.store[n])%(10**9 + 7)
-        else:
-            return (self.store[n])%(10**9 + 7)
+        
+        return (self.store[n])%(10**9 + 7)
+        
