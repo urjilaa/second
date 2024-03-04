@@ -1,14 +1,14 @@
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         ans = []
-        def sets(first_nums, lst):
-            if len(lst) <= len(nums):
-                ans.append(lst[:])
+        lst = []
+        def backtrack(start_idx):
+            ans.append(lst[:])
 
-            for i in range(first_nums,len(nums)):
+            for i in range(start_idx,len(nums)):
                 lst.append(nums[i])
-                sets(i+1, lst)
+                backtrack(i+1)
                 lst.pop()
             
-        sets(0, [])
+        backtrack(0)
         return ans
